@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "genos": {
+      "type": "http",
+      "url": "https://api.genosai.dev/api/public/v1/mcp"
+    }
+  }
+}

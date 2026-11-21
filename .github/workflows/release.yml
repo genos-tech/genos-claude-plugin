@@ -1,0 +1,40 @@
+name: release
+
+# Builds genos-claude-plugin.zip for claude.ai and Claude Desktop (Customize -> Plugins -> upload)
+# and attaches it to a GitHub release. Runs only on a version tag such as v0.1.0.
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check the tag matches the plugin version
+        run: |
+          set -euo pipefail
+          version=$(python3 -c 'import json; print(json.load(open("plugins/genos/.claude-plugin/plugin.json"))["version"])')
+          if [ "v${version}" != "${GITHUB_REF_NAME}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match plugin.json version ${version}" >&2
+            exit 1
+          fi
+
+      - name: Build the zip (manifest at the zip root)
+        run: |
+          set -euo pipefail
+          (cd plugins/genos && zip -qr "$GITHUB_WORKSPACE/genos-claude-plugin.zip" . -x '*.DS_Store')
+          unzip -l genos-claude-plugin.zip
+          unzip -p genos-claude-plugin.zip .claude-plugin/plugin.json | python3 -m json.tool > /dev/null
+          unzip -p genos-claude-plugin.zip .mcp.json | python3 -m json.tool > /dev/null
+
+      - name: Create the GitHub release with the zip
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" genos-claude-plugin.zip --title "Genos plugin ${GITHUB_REF_NAME}" --generate-notes

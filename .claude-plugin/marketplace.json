@@ -1,0 +1,22 @@
+{
+  "name": "genos",
+  "owner": {
+    "name": "Genos"
+  },
+  "metadata": {
+    "description": "Genos workspace connector and workflow skills for Claude."
+  },
+  "plugins": [
+    {
+      "name": "genos",
+      "source": "./plugins/genos",
+      "description": "Genos workspace connector (MCP) with the workflow skills: work your Genos tasks, milestones and notes from Claude, with a clear record of every decision.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    }
+  ]
+}
