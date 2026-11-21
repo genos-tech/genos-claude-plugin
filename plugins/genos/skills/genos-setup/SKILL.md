@@ -30,9 +30,11 @@ paste is shown in Genos under Settings > Developer > Connect an AI app.
   API key for this: the connector signs in with the person's own Genos account.
 - **ChatGPT:** support is coming; do not say it works.
 
-The connector needs a paid plan (Core or higher). A new team starts on Free, and on Free Genos
-refuses the connector's calls with a message about the plan. If a call is refused that way, say so
-plainly, point to Settings > Plan & Usage, and stop there. Do not mention a trial or a free month.
+The connector needs Core or higher. A new account gets its first month of Core free once its email
+address is verified, so the connector normally works from the first day. If a call is still refused
+with a message about the plan (the free month has ended, or the address is not verified yet), say so
+plainly, point to Settings > Plan & Usage, and stop there. You may say that new accounts get their
+first month of Core free; do not promise it to an account that already had it.
 
 An API key (Settings > Developer > API keys) is for scripts, not for the connector. It is sent as an
 `ApiKey` header, and the server address must name the team.

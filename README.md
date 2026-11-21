@@ -10,7 +10,7 @@ Connect Claude to your Genos workspace and teach it how to work there. The plugi
   `genos-setup` for a first-time workspace setup.
 
 You need a Genos account on a plan that includes the connector: **Core or above**. The first month of Core is
-free for new users. <!-- TODO(copy): confirm this offer against current billing before publishing. -->
+free for new users.
 
 ## Install in Claude Code
 
@@ -67,4 +67,4 @@ releases page. Each release is tagged with its version.
 
 ## License
 
-TODO(license): not chosen yet (proposed: MIT). See [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
