@@ -30,8 +30,14 @@ paste is shown in Genos under Settings > Developer > Connect an AI app.
   API key for this: the connector signs in with the person's own Genos account.
 - **ChatGPT:** support is coming; do not say it works.
 
+Tools that never appear are often the plan, not a fault: with the sign-in (OAuth) path, a team on
+Free is refused at the consent page ("Connecting an AI app is available on the Core plan and
+above."), so the connection is never made and no call is ever refused. If the person says the consent
+page told them the plan is too low, the team is on Free: point to Settings > Plan & Usage and stop;
+do not go on troubleshooting the connection.
+
 The connector needs Core or higher. A new account gets its first month of Core free once its email
-address is verified, so the connector normally works from the first day. If a call is still refused
+address is verified, so the connector normally works from the first day. With an API key the refusal comes at the call instead: if a call is still refused
 with a message about the plan (the free month has ended, or the address is not verified yet), say so
 plainly, point to Settings > Plan & Usage, and stop there. You may say that new accounts get their
 first month of Core free; do not promise it to an account that already had it.
