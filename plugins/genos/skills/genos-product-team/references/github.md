@@ -41,7 +41,8 @@ guess); it still counts as a PR.
 ## Reading a pull request
 
 These run as the user, through the GitHub account they connected in Genos under Integrations.
-A repository the user cannot see returns not-found.
+A repository the user cannot see returns not-found. They are on the `github` connection
+(`.../api/public/v1/mcp/github`) and the full address, not on the core one.
 
 | Tool | Gives you |
 | --- | --- |

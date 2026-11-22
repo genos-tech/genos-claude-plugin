@@ -1,6 +1,6 @@
 {
   "name": "genos",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Genos workspace connector (MCP) with the workflow skills: work your Genos tasks, milestones and notes from Claude, with a clear record of every decision.",
   "author": {
     "name": "Genos"

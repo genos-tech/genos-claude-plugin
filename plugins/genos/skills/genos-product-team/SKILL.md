@@ -108,7 +108,10 @@ the drafts ready and post the comment. Template in `references/templates.md`.
 To summarize or review a PR for a task: `get_pr` (state, size, description), `list_pr_files`,
 `list_pr_commits`, `list_pr_reviews` (verdicts), `list_pr_comments` (line-level feedback).
 These read through the GitHub account the user connected in Genos; a repository they cannot
-see returns not-found. Say what you read and what you did not (the tools return file lists and
+see returns not-found. The pull request tools are not on the core connection: they are on
+`.../api/public/v1/mcp/github` and on the full address. If they are missing from your tool list, say
+so and give the person the command `claude mcp add --transport http genos-github <API origin>/api/public/v1/mcp/github`
+(claude.ai: add it as a second custom connector; it counts as one more connected app). Say what you read and what you did not (the tools return file lists and
 sizes, not patches).
 
 ## Planning and reporting (product managers, tech leads)
