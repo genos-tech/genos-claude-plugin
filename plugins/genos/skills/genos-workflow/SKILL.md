@@ -351,7 +351,7 @@ Delivery: `add_task_delivery`, `find_task_by_delivery`. Recover: `restore_task_b
 authority on parameters; this skill is about judgment, not syntax.
 
 **Which connection has them.** The connector the plugin and the setup guide give you is the
-**core** one (`.../api/public/v1/mcp/core`, 22 tools). Four tools above are not on core on purpose:
+**core** one (`.../api/public/v1/mcp/core`, 34 tools). Four tools above are not on core on purpose:
 `list_my_unread` is on `.../mcp/me`, `restore_task_body` on `.../mcp/tasks`, and `get_note_history`
 and `restore_note_version` on `.../mcp/notes` (the full address, `.../api/public/v1/mcp`, has all
 of them). If you need one and it is not in your tool list, say so and tell the person which address

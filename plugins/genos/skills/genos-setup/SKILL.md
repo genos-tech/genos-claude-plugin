@@ -22,7 +22,7 @@ acting for and what already exists ("You are Ana, team X, 3 members, no projects
 
 If the Genos tools are missing, do not guess; tell the person how to connect. The address to
 paste is shown in Genos under Settings > Developer > Connect an AI app. It is the **core**
-address (`.../api/public/v1/mcp/core`, the 22 tools for day-to-day work). Pull request tools
+address (`.../api/public/v1/mcp/core`, the 34 tools for day-to-day work). Pull request tools
 (`.../mcp/github`) and the undo and unread tools (`.../mcp/tasks`, `/notes`, `/me`) are separate
 addresses; each one added is one more connected app on the plan. Say so up front when setting up:
 a person who wants undo (restore a task body or a note version) should add `/mcp/tasks` and
