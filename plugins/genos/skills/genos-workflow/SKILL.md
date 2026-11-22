@@ -319,26 +319,9 @@ each question stand on its own: the user may only see the question.
 
 ## The core rules in one paragraph
 
-The same rules as above, short enough to carry where this skill is not loaded. If you can keep
-only one paragraph in mind, keep this one.
-
-<!-- genos-core-rules:begin (keep in step with the Genos connector: see skills/README.md, "Improving a skill") -->
-Working rules. Search (`search_workspace`) before you create a task or a note: a duplicate is
-worse than a missing one. Work to do goes in a task, what happened in a comment, anything worth
-finding again in a note; separate work gets a new task, not a wider one. Every decision, the
-user's or yours, gets its own note titled "Decision: ..." with the reason, who decided and the
-date; update an existing one instead of writing a second. When you finish work, leave one
-comment: ready or not, what was done, what is left. Editing a description or a note replaces the
-whole body unless you append or replace one passage, so read it first. When a task changes,
-check its parent, its milestone and the tasks waiting on it. When you create a task, decide its
-parent (a task or milestone that will outlive it), what blocks it and what it blocks, and wire
-them. Keep what you create organized so the user can recap it later: put each task, note and
-comment where a person would look for it, suggest a new milestone when new work is its own
-outcome, and never create a project without asking. Link every item you mention (tasks,
-notes, pull requests, web addresses) so the reader can open it. A status must be true: in progress
-only while someone is working on it now; after a change ships, re-read the task and update its
-status the same day. Every status change gets a comment saying why.
-<!-- genos-core-rules:end -->
+The one-paragraph version of the rules above now lives in `skills/rules/genos.md` (the Genos
+connector sends the same paragraph to every AI client, and `/genos:setup` writes the rules to your
+memory file). This skill is retired in the v2 release.
 
 ## Quick map of tools
 
