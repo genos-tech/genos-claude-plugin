@@ -1,6 +1,6 @@
 {
   "name": "genos-product",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Genos skills for product managers: status reports from data, specs, release notes, reprioritizing. Install it next to the genos plugin.",
   "author": {
     "name": "Genos"
