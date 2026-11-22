@@ -238,6 +238,15 @@ should not be lost: a bug you noticed, a follow-up, an improvement, a risk.
 - **A status must be true.** `WIP` only while someone is working on the task right now; do
   not leave it `WIP` after you stop. When you stop, set it to what is true: `Open` (not being
   worked), `Pending` (say what it waits for), or `Closed` (nothing left).
+- **Every status change gets a short comment saying why**, in the same turn, so the history
+  explains itself. `Closed`: what shipped, with the links. `Pending` or `Blocked`: what it
+  waits for and when it comes back. Reopened: why it is open again. `Deleted`: why. A change
+  made with a bulk tool needs one too: a reason inside the tool call is not read by the next
+  person. Give the connector a `reason` with the status change: it posts the reason as that
+  comment ("Status: Open → Pending: waits for ..."), so do not add a second comment that says
+  the same thing, add one only when there is more to say. When the reason is missing the
+  connector does not refuse: the status changes and the reply carries a `suggestions` entry
+  asking you to add the comment. Follow it.
 - A merged pull request often auto-closes its task even if only part of the work shipped.
   After a merge, re-read the task **the same day** and set it to `Closed`, `Pending` (with
   what it waits for) or `Open`; if work is still going on, `WIP` with what is left.
@@ -328,7 +337,7 @@ comment where a person would look for it, suggest a new milestone when new work 
 outcome, and never create a project without asking. Link every item you mention (tasks,
 notes, pull requests, web addresses) so the reader can open it. A status must be true: in progress
 only while someone is working on it now; after a change ships, re-read the task and update its
-status the same day.
+status the same day. Every status change gets a comment saying why.
 <!-- genos-core-rules:end -->
 
 ## Quick map of tools
