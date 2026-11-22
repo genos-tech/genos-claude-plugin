@@ -12,7 +12,7 @@ You get: the pull request linked to the right task, and one comment saying what 
 
 ## Steps
 1. Call `find_task_by_delivery` with the `pr_url`. A match: that is the task, call `get_task`. Empty: take the candidate from the branch name or the person, show it and ask "Link to <task>, yes/no?". Genos tools missing: say so, suggest /genos:setup, stop.
-2. After the yes: `add_task_delivery` (`task_id`, `pr_url`). A `display_id_warning` you did not expect means it is the wrong task: undo it with `remove_task_delivery`. A `webhook_warning`: pass it on to the person.
+2. After the yes: `add_task_delivery` (`task_id`, `pr_url`; how links are made and read: `references/github.md`). A `display_id_warning` you did not expect means it is the wrong task: undo it with `remove_task_delivery`. A `webhook_warning`: pass it on to the person.
 3. Check the last-PR rule. A task id in a branch name closes the task when it merges, so only the task's last pull request carries it.
    - Branch has the id and more pull requests will follow: do not rename the branch (hosts close the pull request). Say the first merge will close the task and you will reopen it; keep the pull request a draft until the set is ready.
    - Earlier pull request without the id: the title should name the task (`PRJ-12 part 1`). Offer `gh pr edit --title`.

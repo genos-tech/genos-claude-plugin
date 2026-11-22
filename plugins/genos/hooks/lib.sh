@@ -37,3 +37,16 @@ genos_marker() {
     [ -n "$sid" ] || return 0
     printf '%s/genos-claude-hooks-%s.%s' "${TMPDIR:-/tmp}" "$sid" "$1"
 }
+
+# genos_rules_installed: succeeds when a Genos rules block (marker "genos-rules:begin", written by
+# /genos:setup) is in one of the memory files Claude Code reads. Local files only, no network.
+genos_rules_installed() {
+    local cfg proj f
+    cfg=${CLAUDE_CONFIG_DIR:-$HOME/.claude}
+    proj=${CLAUDE_PROJECT_DIR:-.}
+    for f in "$cfg"/rules/genos*.md "$cfg/CLAUDE.md" "$proj/CLAUDE.md" "$proj"/.claude/rules/genos*.md "$proj/CLAUDE.local.md"; do
+        [ -f "$f" ] || continue
+        grep -q -F 'genos-rules:begin' "$f" 2>/dev/null && return 0
+    done
+    return 1
+}

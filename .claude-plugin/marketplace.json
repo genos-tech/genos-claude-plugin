@@ -11,7 +11,7 @@
       "name": "genos",
       "source": "./plugins/genos",
       "description": "Genos workspace connector (MCP) with the workflow skills: work your Genos tasks, milestones and notes from Claude, with a clear record of every decision.",
-      "version": "0.4.1",
+      "version": "0.5.0",
       "author": {
         "name": "Genos"
       },
@@ -22,7 +22,7 @@
       "name": "genos-engineering",
       "source": "./plugins/genos-engineering",
       "description": "Genos skills for software engineers: start a task, file a bug, open and ready a pull request, close out after a merge. Install it next to the genos plugin.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Genos"
       },
