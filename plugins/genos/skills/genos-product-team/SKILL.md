@@ -195,7 +195,9 @@ On top of the list in `genos-workflow`:
 
 ## Habits
 
-- File a bug **after** searching for a duplicate and checking the main branch.
+- File a bug **after** searching for a duplicate and checking the main branch. Then place it
+  (`genos-workflow`, "When to create a task"): its parent, what blocks it or waits on it (the
+  fix PR's task, a release), and a new milestone suggested when it is a project of its own.
 - Keep PRs and tasks small and finished; leave the task in a state someone can pick up.
 - A claim in a comment is something you checked. "I read the diff" and "I ran it" are
   different; say which.
