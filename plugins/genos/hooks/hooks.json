@@ -1,0 +1,39 @@
+{
+    "description": "Genos: suggestions only (point Claude at the user's Genos work, link commits and PRs to their task, remind to record). Turn off with GENOS_HOOKS=off.",
+    "hooks": {
+        "SessionStart": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.sh\"",
+                        "timeout": 5
+                    }
+                ]
+            }
+        ],
+        "PostToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/post-bash.sh\"",
+                        "timeout": 5
+                    }
+                ]
+            }
+        ],
+        "Stop": [
+            {
+                "hooks": [
+                    {
+                        "type": "command",
+                        "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/stop.sh\"",
+                        "timeout": 5
+                    }
+                ]
+            }
+        ]
+    }
+}
