@@ -21,6 +21,10 @@ Genos.
 - **Put the task's display id in the branch name** (`feature/PRJ-42-short-name`). Genos links
   a PR to the task automatically once the repository's webhook is set up, and keeps the
   PR's state (open, draft, merged, closed) up to date on the task.
+- **A task id that closes the task on merge goes only on the change that finishes it.** For a
+  task with several PRs, only the last one carries the id in its branch name; the earlier
+  ones name the task in the title or description instead. Never rename the branch of an open
+  PR (most hosts close it); put the id in the title.
 - A branch that does not name a task, or a branch with no PR yet: `add_task_delivery`.
   Repeating it is harmless. If it warns that the branch or PR title does not name the task,
   check you picked the right task.
@@ -40,7 +44,7 @@ Genos.
 | You start work | `WIP` |
 | PR open, in review, or changes requested | still `WIP` |
 | PR merged and the acceptance criteria are met | `Closed` |
-| PR merged but part of the task is still open | back to `WIP`, with a comment saying what is left |
+| PR merged but part of the task is still open | back to `WIP` only if work continues now; else `Pending` (what it waits for) or `Open`, with a comment saying what is left |
 | Waiting on a person, a release or an external team | `Blocked` or `Pending`, with the reason |
 
 A merge usually **closes the task automatically**, even when only part of it shipped. After
@@ -102,6 +106,14 @@ The first line says **Ready to merge** or **Not ready to merge**. Then:
 Before that comment exists, a PR that must not be merged yet is opened as a **draft** or says
 "do not merge yet, see PRJ-42" at the top of its description. When the set is complete, mark
 the drafts ready and post the comment. Template in `references/templates.md`.
+
+**Draft means do not merge yet** (checks running, a dependency, a decision pending).
+**Ready for review means safe to merge**, in the order you gave. When you report a PR, say
+"merge now: yes" or "merge now: no" with its link and the reason, in every comment and report.
+
+**Never report something as ready while a required check fails.** A red required check means
+"merge now: no". Fix it right away, or say plainly that it is red and what you are doing.
+Mark a PR ready only when its checks are green and the PRs it depends on are merged.
 
 ### Code review and summaries
 

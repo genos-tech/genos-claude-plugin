@@ -140,9 +140,13 @@ Rules of thumb:
 - **Say how you know.** Separate what you verified ("ran the tests, 42 passed") from what you
   assume ("should be fine on mobile, not checked"). Name what you did **not** do.
 - **Use absolute dates** ("2026-03-04"), never "yesterday" or "next week".
-- Refer to other items with chips (`#PRJ-123`, or `[#title](task:ID)` with an id you read),
-  so readers can click through. Link a pull request or branch to its task
+- **Every reference is a clickable link, never a bare id or plain text.** Tasks as chips
+  (`#PRJ-123`, or `[#title](task:ID)` with an id you read), pull requests as
+  `[repo #12](full URL)`, any web address as `[label](URL)`. Re-read what you wrote before
+  you send it and fix any id that is not a link. Link a pull request or branch to its task
   (`add_task_delivery`) and comment the link.
+- **Refer to a note by its title, as a link**, never by a number: people know notes by
+  title, and a number tells them nothing.
 
 ## Decisions: write every one down
 
@@ -222,8 +226,12 @@ should not be lost: a bug you noticed, a follow-up, an improvement, a risk.
 - A parent task or milestone closes **last**, only when every child is closed (or deleted).
   Closing a parent reads as "all of it is done". A child that is still open does not stop it
   from closing; it just starts to read as closed. So look for open children first (below).
+- **A status must be true.** `WIP` only while someone is working on the task right now; do
+  not leave it `WIP` after you stop. When you stop, set it to what is true: `Open` (not being
+  worked), `Pending` (say what it waits for), or `Closed` (nothing left).
 - A merged pull request often auto-closes its task even if only part of the work shipped.
-  After a merge, re-read the task: if something is left, set it back to `WIP` and say what.
+  After a merge, re-read the task **the same day** and set it to `Closed`, `Pending` (with
+  what it waits for) or `Open`; if work is still going on, `WIP` with what is left.
 - Never set `Closed` on a task you only partly finished. Leave a comment with what remains.
 
 ### After you change a task, check what hangs on it
@@ -297,7 +305,10 @@ user's or yours, gets its own note titled "Decision: ..." with the reason, who d
 date; update an existing one instead of writing a second. When you finish work, leave one
 comment: ready or not, what was done, what is left. Editing a description or a note replaces the
 whole body unless you append or replace one passage, so read it first. When a task changes,
-check its parent, its milestone and the tasks waiting on it.
+check its parent, its milestone and the tasks waiting on it. Link every item you mention (tasks,
+notes, pull requests, web addresses) so the reader can open it. A status must be true: in progress
+only while someone is working on it now; after a change ships, re-read the task and update its
+status the same day.
 <!-- genos-core-rules:end -->
 
 ## Quick map of tools
