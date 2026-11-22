@@ -17,6 +17,28 @@
       },
       "homepage": "https://genosai.dev",
       "category": "productivity"
+    },
+    {
+      "name": "genos-engineering",
+      "source": "./plugins/genos-engineering",
+      "description": "Genos skills for software engineers: start a task, file a bug, open and ready a pull request, close out after a merge. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-product",
+      "source": "./plugins/genos-product",
+      "description": "Genos skills for product managers: status reports from data, specs, release notes, reprioritizing. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
     }
   ]
 }

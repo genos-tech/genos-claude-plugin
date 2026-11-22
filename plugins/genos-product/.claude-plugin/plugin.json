@@ -1,0 +1,16 @@
+{
+  "name": "genos-product",
+  "version": "0.1.0",
+  "description": "Genos skills for product managers: status reports from data, specs, release notes, reprioritizing. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "product",
+    "planning",
+    "reporting"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}
