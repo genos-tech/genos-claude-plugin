@@ -1,6 +1,6 @@
 {
   "name": "genos-engineering",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Genos skills for software engineers: start a task, file a bug, open and ready a pull request, close out after a merge. Install it next to the genos plugin.",
   "author": {
     "name": "Genos"
