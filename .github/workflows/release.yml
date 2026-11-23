@@ -3,7 +3,7 @@ name: release
 # Source: genos-tech/genos-docs, plugin-release/release.yml. The publish-plugin job there copies this file to
 # .github/workflows/release.yml of this repo (MIP-2093). Edit it in genos-docs, not here.
 #
-# On a version tag such as v0.5.1 it builds one zip per plugin (genos, genos-engineering, genos-product) for
+# On a version tag such as v0.5.1 it builds one zip per plugin (every folder under plugins/) for
 # claude.ai and Claude Desktop (Customize -> Plugins -> upload) and attaches all of them to the GitHub release.
 # If the release already exists (created by hand first) the zips are uploaded over it (--clobber) instead of failing.
 # The tag must equal the genos plugin's version; the role packs carry their own version (see
@@ -20,6 +20,8 @@ permissions:
 jobs:
   release:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
 

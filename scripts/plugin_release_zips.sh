@@ -5,7 +5,7 @@
 #
 #   plugin_release_zips.sh <repo-root> <tag> <out-dir>
 #
-# <repo-root>/plugins/<name>/ holds each plugin (genos, genos-engineering, genos-product).
+# <repo-root>/plugins/<name>/ holds each plugin (every folder; genos plus the role packs).
 # Rules (any failure exits non-zero, nothing is uploaded by this script):
 #   - the tag is v<semver> and equals the version in plugins/genos/.claude-plugin/plugin.json
 #     (the tag follows the genos plugin; the role packs carry their own version inside and are
@@ -20,19 +20,20 @@ root=${1:?repo root}
 tag=${2:?tag}
 out=${3:?output dir}
 
-# zip name per plugin folder (genos keeps its old name so existing links stay valid)
-declare -A ZIP=(
-    [genos]=genos-claude-plugin.zip
-    [genos-engineering]=genos-engineering-plugin.zip
-    [genos-product]=genos-product-plugin.zip
-)
-ORDER=(genos genos-engineering genos-product)
+# One zip per folder under plugins/ (no list to keep in sync): genos keeps its old name
+# genos-claude-plugin.zip so existing links stay valid, every other folder is <name>-plugin.zip.
+zipname() { if [ "$1" = genos ]; then echo genos-claude-plugin.zip; else echo "$1-plugin.zip"; fi; }
 
 semver='^[0-9]+\.[0-9]+\.[0-9]+([-+][0-9A-Za-z.-]+)?$'
 fail() { echo "ERROR: $*" >&2; exit 1; }
 jget() { python3 -c 'import json,sys; print(json.load(open(sys.argv[1])).get(sys.argv[2], ""))' "$1" "$2"; }
 
 [[ $tag =~ ^v[0-9] ]] || fail "tag '$tag' is not v<version>"
+[ -d "$root/plugins/genos" ] || fail "plugins/genos is missing"
+ORDER=()
+for d in "$root"/plugins/*/; do
+    [ -d "$d" ] && ORDER+=("$(basename "$d")")
+done
 mkdir -p "$out"
 out=$(cd "$out" && pwd)
 
@@ -54,7 +55,7 @@ for name in "${ORDER[@]}"; do
 done
 
 for name in "${ORDER[@]}"; do
-    zipfile="$out/${ZIP[$name]}"
+    zipfile="$out/$(zipname "$name")"
     rm -f "$zipfile"
     (cd "$root/plugins/$name" && zip -qr "$zipfile" . -x '*.DS_Store')
     # the manifest must sit at the zip root, and still parse from inside the zip
@@ -64,5 +65,5 @@ for name in "${ORDER[@]}"; do
         fail "$name: zip has a wrapping folder"
     fi
     echo "built $zipfile ($(unzip -l "$zipfile" | tail -1 | awk '{print $2}') files)" >&2
-    echo "${ZIP[$name]}"
+    echo "$(zipname "$name")"
 done
