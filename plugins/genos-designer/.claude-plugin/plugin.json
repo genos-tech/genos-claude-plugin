@@ -1,0 +1,16 @@
+{
+  "name": "genos-designer",
+  "version": "0.1.0",
+  "description": "Genos skills for designers: answer feedback on a design note and turn it into tasks, hand a design to the builders, log UI problems as tasks. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "design",
+    "handoff",
+    "tasks"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}

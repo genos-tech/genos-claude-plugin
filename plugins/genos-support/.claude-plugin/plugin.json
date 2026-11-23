@@ -1,0 +1,16 @@
+{
+  "name": "genos-support",
+  "version": "0.1.0",
+  "description": "Genos skills for customer support: turn a customer report into a task without personal data, a weekly support digest, escalate a stuck issue to its owner. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "support",
+    "tickets",
+    "escalation"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}

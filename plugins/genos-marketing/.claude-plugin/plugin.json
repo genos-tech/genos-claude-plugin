@@ -1,0 +1,16 @@
+{
+  "name": "genos-marketing",
+  "version": "0.1.0",
+  "description": "Genos skills for marketing: plan a campaign, see what publishes this week, build a launch checklist with approvals, write the campaign results. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "marketing",
+    "campaign",
+    "launch"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}

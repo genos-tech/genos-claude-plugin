@@ -39,6 +39,50 @@
       },
       "homepage": "https://genosai.dev",
       "category": "productivity"
+    },
+    {
+      "name": "genos-designer",
+      "source": "./plugins/genos-designer",
+      "description": "Genos skills for designers: answer feedback on a design note and turn it into tasks, hand a design to the builders, log UI problems as tasks. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-marketing",
+      "source": "./plugins/genos-marketing",
+      "description": "Genos skills for marketing: plan a campaign, see what publishes this week, build a launch checklist with approvals, write the campaign results. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-sales",
+      "source": "./plugins/genos-sales",
+      "description": "Genos skills for sales: brief an account before a call, log a call with its follow-ups, review a pipeline kept as tasks. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-support",
+      "source": "./plugins/genos-support",
+      "description": "Genos skills for customer support: turn a customer report into a task without personal data, a weekly support digest, escalate a stuck issue to its owner. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
     }
   ]
 }

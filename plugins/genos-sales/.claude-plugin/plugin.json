@@ -1,0 +1,16 @@
+{
+  "name": "genos-sales",
+  "version": "0.1.0",
+  "description": "Genos skills for sales: brief an account before a call, log a call with its follow-ups, review a pipeline kept as tasks. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "sales",
+    "pipeline",
+    "follow-up"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}
