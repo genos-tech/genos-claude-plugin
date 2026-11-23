@@ -1,0 +1,16 @@
+{
+  "name": "genos-teaching",
+  "version": "0.1.0",
+  "description": "Genos skills for teachers: plan a course by unit and lesson, prepare the teaching week, track grading without student names. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "teaching",
+    "lessons",
+    "grading"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}

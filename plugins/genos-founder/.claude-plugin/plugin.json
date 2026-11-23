@@ -1,0 +1,16 @@
+{
+  "name": "genos-founder",
+  "version": "0.1.0",
+  "description": "Genos skills for founders and small teams: weekly priorities from the data, a draft investor update that is never sent, customer feedback turned into requests. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "founder",
+    "priorities",
+    "investor-update"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}

@@ -11,7 +11,7 @@
       "name": "genos",
       "source": "./plugins/genos",
       "description": "Genos workspace connector (MCP) with the workflow skills: work your Genos tasks, milestones and notes from Claude, with a clear record of every decision.",
-      "version": "0.5.1",
+      "version": "0.5.2",
       "author": {
         "name": "Genos"
       },
@@ -77,6 +77,50 @@
       "name": "genos-support",
       "source": "./plugins/genos-support",
       "description": "Genos skills for customer support: turn a customer report into a task without personal data, a weekly support digest, escalate a stuck issue to its owner. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-founder",
+      "source": "./plugins/genos-founder",
+      "description": "Genos skills for founders and small teams: weekly priorities from the data, a draft investor update that is never sent, customer feedback turned into requests. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-research",
+      "source": "./plugins/genos-research",
+      "description": "Genos skills for researchers: log an experiment as a findings note, keep a literature review, plan a study, write the weekly research update. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-student",
+      "source": "./plugins/genos-student",
+      "description": "Genos skills for students: break an assignment into dated steps, lay out the study week, plan revision for an exam. Install it next to the genos plugin.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Genos"
+      },
+      "homepage": "https://genosai.dev",
+      "category": "productivity"
+    },
+    {
+      "name": "genos-teaching",
+      "source": "./plugins/genos-teaching",
+      "description": "Genos skills for teachers: plan a course by unit and lesson, prepare the teaching week, track grading without student names. Install it next to the genos plugin.",
       "version": "0.1.0",
       "author": {
         "name": "Genos"

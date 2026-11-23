@@ -1,0 +1,16 @@
+{
+  "name": "genos-student",
+  "version": "0.1.0",
+  "description": "Genos skills for students: break an assignment into dated steps, lay out the study week, plan revision for an exam. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "student",
+    "assignments",
+    "exams"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "genos-research",
+  "version": "0.1.0",
+  "description": "Genos skills for researchers: log an experiment as a findings note, keep a literature review, plan a study, write the weekly research update. Install it next to the genos plugin.",
+  "author": {
+    "name": "Genos"
+  },
+  "repository": "https://github.com/genos-tech/genos-claude-plugin",
+  "keywords": [
+    "genos",
+    "research",
+    "experiments",
+    "literature"
+  ],
+  "privacyPolicyUrl": "https://genosai.dev/privacy"
+}
