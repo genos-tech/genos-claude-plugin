@@ -1,6 +1,6 @@
 {
   "name": "genos-teaching",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Genos skills for teachers: plan a course by unit and lesson, prepare the teaching week, track grading without student names. Install it next to the genos plugin.",
   "author": {
     "name": "Genos"

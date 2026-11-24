@@ -1,6 +1,6 @@
 {
   "name": "genos-sales",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Genos skills for sales: brief an account before a call, log a call with its follow-ups, review a pipeline kept as tasks. Install it next to the genos plugin.",
   "author": {
     "name": "Genos"

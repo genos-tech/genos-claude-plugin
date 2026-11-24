@@ -1,6 +1,6 @@
 {
   "name": "genos-designer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Genos skills for designers: answer feedback on a design note and turn it into tasks, hand a design to the builders, log UI problems as tasks. Install it next to the genos plugin.",
   "author": {
     "name": "Genos"

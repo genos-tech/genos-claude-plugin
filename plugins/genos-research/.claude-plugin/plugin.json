@@ -1,6 +1,6 @@
 {
   "name": "genos-research",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Genos skills for researchers: log an experiment as a findings note, keep a literature review, plan a study, write the weekly research update. Install it next to the genos plugin.",
   "author": {
     "name": "Genos"
