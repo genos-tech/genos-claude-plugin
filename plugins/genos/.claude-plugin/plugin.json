@@ -1,6 +1,6 @@
 {
   "name": "genos",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Genos workspace connector (MCP) with thirteen runbooks you call by name (setup, catch-up, wrap-up, weekly review, create a task, plan a project, record a decision, meeting notes, triage, tidy the board, hand-off, HTML page, dashboard page) and small suggestion-only hooks. Run /genos:setup once.",
   "author": {
     "name": "Genos"
